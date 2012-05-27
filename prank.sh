@@ -1,4 +1,4 @@
-APOCALYPSE="2012/05/27 06:30:00"
+APOCALYPSE="2012-05-27 06:34:00"
 
 sleep $($(date -j -f "%Y-%m-%d %H:%M:%S" "$(echo $APOCALYPSE)" +%s) - $(date +%s))
 
