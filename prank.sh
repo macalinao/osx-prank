@@ -1,9 +1,6 @@
-current_epoch=$(date +%s)
-target_epoch=$(date -d '05/27/2012 17:55' +%s) # set this to the time of the prank
+APOCALYPSE = "2012/05/27 06:30:00"
 
-sleep_seconds=$(( $target_epoch - $current_epoch ))
-
-sleep $sleep_seconds
+sleep $($(date -j -f "%Y-%m-%d %H:%M:%S" $APOCALYPSE +%s) - $(date +%s))
 
 while true; do
    osascript -e "set Volume 10"
